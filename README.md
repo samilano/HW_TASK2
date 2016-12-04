@@ -1,9 +1,13 @@
 # HW_TASK2
 Hotelworld - Task 2
 
+
+****************************************************************************
+**********************    Prerequisites    *********************************
+****************************************************************************
 For this tests I was using Selenium 3.0 beta2. 
 
-This version of Selenium requires a path to geckodriver to be set.
+This version of Selenium requires a path to geckodriver.exe to be set in order to use Firefox browser.
 For this I'm using:
 System.setProperty("webdriver.firefox.marionette", Util.PATH_TO_GECKODRIVER);
 
