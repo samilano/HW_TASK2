@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import hwfrontend01.Util;
@@ -90,9 +91,11 @@ public class HWFrontEnd01 {
 	 */
 	@BeforeMethod
 	public void beforeMethod() {
+		//System.setProperty("webdriver.chrome.driver", "C://Selenium//Chrome//chromedriver.exe");
+		//driver = new ChromeDriver();
 		System.setProperty("webdriver.firefox.marionette", Util.PATH_TO_GECKODRIVER);
 		driver = new FirefoxDriver();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(500, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		driver.get(Util.HOME_PAGE_URL);
   }
